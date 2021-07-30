@@ -4,8 +4,6 @@ import java.util.Locale;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,9 +49,9 @@ public class UFragmentStack extends BaseActivity {
 
         if (savedInstanceState == null) {
             // Do first time initialization -- add initial fragment.
-            Fragment newFragment = CountingFragment.newInstance(mStackLevel);
+           /* Fragment newFragment = CountingFragment.newInstance(mStackLevel);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.add(R.id.simple_fragment, newFragment).commit();
+            ft.add(R.id.simple_fragment, newFragment).commit();*/
         } else {
             mStackLevel = savedInstanceState.getInt("level");
         }
@@ -84,7 +82,7 @@ public class UFragmentStack extends BaseActivity {
         mStackLevel++;
 
         // Instantiate a new fragment.
-        Fragment newFragment = CountingFragment.newInstance(mStackLevel);
+        /*Fragment newFragment = CountingFragment.newInstance(mStackLevel);
 
         // Add the fragment to the activity, pushing this transaction
         // on to the back stack.
@@ -92,8 +90,9 @@ public class UFragmentStack extends BaseActivity {
         ft.replace(R.id.simple_fragment, newFragment);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.addToBackStack(null);
-        ft.commit();
+        ft.commit();*/
     }
+/*
 
     public static class CountingFragment extends Fragment {
         private String mPageName;
@@ -113,10 +112,12 @@ public class UFragmentStack extends BaseActivity {
             MobclickAgent.onPageStart(mPageName);
         }
 
-        /**
+        */
+/**
          * Create a new instance of CountingFragment, providing "num" as an
          * argument.
-         */
+         *//*
+
         static CountingFragment newInstance(int num) {
             CountingFragment f = new CountingFragment();
 
@@ -128,9 +129,11 @@ public class UFragmentStack extends BaseActivity {
             return f;
         }
 
-        /**
+        */
+/**
          * When creating, retrieve this instance's number from its arguments.
-         */
+         *//*
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -138,10 +141,12 @@ public class UFragmentStack extends BaseActivity {
             mPageName = String.format(Locale.getDefault(),"fragment %d", mNum);
         }
 
-        /**
+        */
+/**
          * The Fragment's UI is just a simple text view showing its instance
          * number.
-         */
+         *//*
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             FrameLayout fl = new FrameLayout(getActivity());
@@ -156,5 +161,6 @@ public class UFragmentStack extends BaseActivity {
         }
     }
 
+*/
 
 }

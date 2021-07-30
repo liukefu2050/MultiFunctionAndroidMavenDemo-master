@@ -1,13 +1,12 @@
 package com.umeng.soexample.analytics;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTabHost;
-import android.support.v4.app.FragmentTransaction;
+//import androidx.fragment.app.Fragment;
+//import androidx.fragment.app.FragmentTabHost;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.umeng.analytics.MobclickAgent;
@@ -29,7 +28,11 @@ import com.umeng.soexample.R;
  */
 
 public class UFragmentTabs extends BaseActivity {
-
+    @Override
+    public int getLayout() {
+        return 0;
+    }
+/*
     private FragmentTabHost mTabHost;
 
     @Override
@@ -90,10 +93,10 @@ public class UFragmentTabs extends BaseActivity {
             MobclickAgent.onPageStart(mPageName);
         }
 
-        /**
+        *//**
          * The Fragment's UI is just a simple text view showing its instance
          * number.
-         */
+         *//*
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             TextView tv = new TextView(getActivity());
@@ -116,10 +119,10 @@ public class UFragmentTabs extends BaseActivity {
             return f;
         }
 
-        /**
+        *//**
          * The Fragment's UI is just a simple text view showing its instance
          * number.
-         */
+         *//*
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             TextView tv = new TextView(getActivity());
@@ -140,5 +143,5 @@ public class UFragmentTabs extends BaseActivity {
             super.onResume();
             MobclickAgent.onPageStart(mPageName);
         }
-    }
+    }*/
 }

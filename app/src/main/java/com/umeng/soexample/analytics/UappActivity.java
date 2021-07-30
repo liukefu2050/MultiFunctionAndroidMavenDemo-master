@@ -103,7 +103,7 @@ public class UappActivity extends BaseActivity {
         findViewById(R.id.analytics_g4_b2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(mContext, UFragmentTabs.class));
+                //startActivity(new Intent(mContext, UFragmentTabs.class));
             }
         });
 
