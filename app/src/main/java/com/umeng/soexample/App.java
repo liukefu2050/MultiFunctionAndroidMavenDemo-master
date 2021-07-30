@@ -2,32 +2,13 @@ package com.umeng.soexample;
 
 
 import android.app.Application;
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
-import android.os.Handler;
-import android.util.Log;
-import android.widget.RemoteViews;
-import android.widget.Toast;
+
+import androidx.core.content.FileProvider;
 
 import com.taobao.accs.ACCSClient;
 import com.taobao.accs.AccsClientConfig;
 import com.taobao.agoo.TaobaoRegister;
 import com.umeng.commonsdk.UMConfigure;
-import com.umeng.message.IUmengRegisterCallback;
-import com.umeng.message.MsgConstant;
-import com.umeng.message.PushAgent;
-import com.umeng.message.UTrack;
-import com.umeng.message.UmengMessageHandler;
-import com.umeng.message.UmengNotificationClickHandler;
-import com.umeng.message.entity.UMessage;
-import com.umeng.socialize.PlatformConfig;
-
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.soexample.push.UmengNotificationService;
 import com.umeng.soexample.sp.SharedPreferencesHelper;
 
 /**
@@ -58,6 +39,7 @@ public class App extends Application {
             e.printStackTrace();
         }
 
+        //FileProvider fileProvider = null;
         //友盟预初始化
         UMConfigure.preInit(getApplicationContext(),"59892f08310c9307b60023d0","Umeng");
 

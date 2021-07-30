@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import androidx.viewpager.widget.ViewPager;
+//import androidx.viewpager.widget.ViewPager;
 
 import com.umeng.soexample.R;
 import com.umeng.soexample.log.views.LogFragmentPagerAdapter;

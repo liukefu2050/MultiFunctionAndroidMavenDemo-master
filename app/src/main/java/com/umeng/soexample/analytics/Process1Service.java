@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
-import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.umeng.analytics.MobclickAgent;
@@ -23,7 +22,6 @@ public class Process1Service extends Service{
     private Context mContext;
     private Handler mHandler;
 
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return null;
